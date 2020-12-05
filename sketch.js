@@ -13,29 +13,30 @@ var bOx1,bOx2,box3
 var boX1
 
 function setup() {
-  createCanvas(800,800);
+  createCanvas(800,500);
   engine=Engine.create()
   world=engine.world
   stroke(255)
 
-  stand1=new STANd(400,550,150,20)
+  stand1=new STANd(400,350,150,20)
   stand2=new STANd(600,300,60,20)
+  ground=new STANd(400,480,800,20)
 
   poll=new Poly(100,400,30)
 
   sling1=new SlingShot(poll.body,{x:100,y:400})
 
-  box1=new Box(400,525,30,50)
-  box2=new Box(370,525,30,50)
-  box3=new Box(340,525,30,50)
-  box4=new Box(430,525,30,50)
-  box5=new Box(460,525,30,50)
+  box1=new Box(400,325,30,50)
+  box2=new Box(370,325,30,50)
+  box3=new Box(340,325,30,50)
+  box4=new Box(430,325,30,50)
+  box5=new Box(460,325,30,50)
 
-  Box1=new Box(400,475,30,50)
-  Box2=new Box(430,475,30,50)
-  Box3=new Box(370,475,30,50)
+  Box1=new Box(400,275,30,50)
+  Box2=new Box(430,275,30,50)
+  Box3=new Box(370,275,30,50)
 
-  BOX1=new Box(400,425,30,50)
+  BOX1=new Box(400,200,30,50)
 
   bOx1=new Box(600,275,20,50)
   bOx2=new Box(620,275,20,50)
@@ -55,6 +56,7 @@ function draw() {
   
   stand1.display()
   stand2.display()
+  ground.display()
 
   sling1.display()
 
